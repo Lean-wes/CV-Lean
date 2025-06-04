@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leandro Westfald - Técnico em Informática</title>
+    <meta name="description" content="CV profissional de Leandro Westfald - Técnico em Informática com experiência em vendas, manutenção técnica e construção civil">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* CSS Variables */
+:root {
+  /* Colors */
+  --primary: #0080ff;
+  --primary-dark: #0066cc;
+  --secondary: #3a3f47;
+  --background: #f5f7fa;
+  --surface: #ffffff;
+  --text-primary: #1f2329;
+  --text-secondary: #6b7280;
+  --border: #e5e7eb;
+  --accent: #3b82f6;
+  --success: #16a34a;
+  --warning: #eab308;
+  --error: #ef4444;
+  
+  /* Dark theme colors */
+  --dark-background: #0f1419;
+  --dark-surface: #1a1f2e;
+  --dark-text-primary: #e8ebf0;
+  --dark-text-secondary: #9ca3af;
+  --dark-border: #2d3748;
+  
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  /* Transitions */
+  --transition: 0.3s ease-in-out;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --background: var(--dark-background);
+  --surface: var(--dark-surface);
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
+  --border: var(--dark-border);
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--background);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-size: 1.125rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition);
+}
+
+.theme-toggle:hover {
+  background: var(--primary-dark);
+  transform: scale(1.1);
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  padding: var(--space-20) 0 var(--space-16);
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+  opacity: 0.3;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  position: relative;
+  z-index: 1;
+}
+
+.profile-image {
+  flex-shrink: 0;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  object-fit: cover;
+  animation: fadeInUp 1s ease-out;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.name {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: var(--space-6);
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+}
+
+.contact-item i {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.social-links {
+  display: flex;
+  gap: var(--space-4);
+  animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Navigation */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: var(--space-8);
+  margin: 0;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.download-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: var(--space-3) var(--space-6);
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.download-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Main Content */
+.main {
+  padding: var(--space-16) 0;
+}
+
+/* Sections */
+.section {
+  margin-bottom: var(--space-20);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: var(--space-8);
+  color: var(--text-primary);
+}
+
+.section-title i {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+/* About Section */
+.about-content {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.about-text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  text-align: justify;
+}
+
+.qualities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.quality-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: all var(--transition);
+}
+
+.quality-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.quality-item i {
+  color: var(--primary);
+  font-size: 1.125rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: var(--space-8);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--space-12);
+  background: var(--surface);
+  border-radius: 12px;
+  padding: var(--space-6);
+  border: 1px solid var(--border);
+  transition: all var(--transition);
+}
+
+.timeline-item:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -23px;
+  top: var(--space-6);
+  width: 30px;
+  height: 30px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+}
+
+.timeline-content h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: var(--space-3);
+}
+
+.timeline-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.skill-tag {
+  background: rgba(var(--primary), 0.1);
+  color: var(--primary);
+  padding: var(--space-1) var(--space-3);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Education Grid */
+.education-grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.education-item {
+  display: flex;
+  gap: var(--space-4);
+  background: var(--surface);
+  padding: var(--space-6);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: all var(--transition);
+}
+
+.education-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.education-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: rgba(var(--primary), 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+
+.education-content h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+  color: var(--text-primary);
+}
+
+.education-content h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: var(--space-2);
+}
+
+.education-content p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Skills */
+.skills-container {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.skill-category {
+  background: var(--surface);
+  padding: var(--space-6);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.skill-category h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-6);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.skill-category h3::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.skill-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.skill-item:last-child {
+  margin-bottom: 0;
+}
+
+.skill-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skill-bar {
+  width: 200px;
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 4px;
+  width: 0;
+  transition: width 1.5s ease-out 0.5s;
+}
+
+.skill-percentage {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary);
+  min-width: 40px;
+  text-align: right;
+}
+
+/* Languages */
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+}
+
+.language-item {
+  background: var(--surface);
+  padding: var(--space-6);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: all var(--transition);
+}
+
+.language-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.language-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.language-header i {
+  color: var(--primary);
+}
+
+.language-level {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-3);
+}
+
+.language-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.language-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 3px;
+  transition: width 1s ease-out;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.project-item {
+  background: var(--surface);
+  padding: var(--space-6);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.project-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(var(--primary), 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.project-item h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  color: var(--text-primary);
+}
+
+.project-item p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+}
+
+.project-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag {
+  background: rgba(var(--primary), 0.1);
+  color: var(--primary);
+  padding: var(--space-1) var(--space-3);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Contact */
+.contact-container {
+  display: grid;
+  gap: var(--space-12);
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+}
+
+.contact-card {
+  background: var(--surface);
+  padding: var(--space-6);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: all var(--transition);
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card i {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: var(--space-3);
+}
+
+.contact-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+}
+
+.contact-card p {
+  color: var(--text-secondary);
+}
+
+/* Contact Form */
+.contact-form {
+  background: var(--surface);
+  padding: var(--space-8);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.form-group {
+  margin-bottom: var(--space-6);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--background);
+  color: var(--text-primary);
+  transition: all var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary), 0.1);
+}
+
+.submit-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: var(--space-4) var(--space-8);
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0 auto;
+}
+
+.submit-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Footer */
+.footer {
+  background: var(--secondary);
+  color: white;
+  padding: var(--space-8) 0;
+  text-align: center;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-3);
+  }
+  
+  .header {
+    padding: var(--space-16) 0 var(--space-8);
+  }
+  
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-6);
+  }
+  
+  .name {
+    font-size: 1.875rem;
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .navbar .container {
+    position: relative;
+  }
+  
+  .download-btn {
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.875rem;
+  }
+  
+  .timeline {
+    padding-left: var(--space-6);
+  }
+  
+  .timeline::before {
+    left: 10px;
+  }
+  
+  .timeline-icon {
+    left: -18px;
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+  
+  .skill-bar {
+    width: 150px;
+  }
+  
+  .skill-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+    text-align: center;
+  }
+  
+  .skill-percentage {
+    margin-top: var(--space-1);
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    top: var(--space-3);
+    right: var(--space-3);
+    width: 45px;
+    height: 45px;
+  }
+  
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .name {
+    font-size: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.125rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .qualities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .languages-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer .container {
+    flex-direction: column;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .theme-toggle,
+  .navbar,
+  .download-btn,
+  .contact-form {
+    display: none;
+  }
+  
+  .header {
+    background: none !important;
+    color: black !important;
+  }
+  
+  .section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .timeline-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+}
+
+/* Focus Styles */
+*:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline-offset: 0;
+}
+</style>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <!-- Place to upload your image: Replace 'assets/profile.jpg' with your image path -->
+                    <img src="perfil.jpg" alt="Leandro Westfald" class="profile-img" 
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDE1MCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iNzUiIGN5PSI3NSIgcj0iNzUiIGZpbGw9IiNmMGY5ZmYiLz48Y2lyY2xlIGN4PSI3NSIgY3k9IjUwIiByPSIyNSIgZmlsbD0iIzA4MGZmZiIvPjxwYXRoIGQ9Ik0zMCAxMjBjMC0yNSAyMC00NSA0NS00NXM0NSAyMCA0NSA0NXYxMEgzMHoiIGZpbGw9IiMwODBmZmYiLz48L3N2Zz4='" />
+                </div>
+                <div class="profile-info">
+                    <h1 class="name">Leandro Westfald</h1>
+                    <p class="title">Técnico em Informática</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(54) 96227280</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>westfaldleandro@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>R. Luiz Biglia 235, Vacaria RS</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="mailto:westfaldleandro@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/leandro-westfald" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Lean-wes" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
+                <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+                <li><a href="#educacao" class="nav-link">Educação</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#idiomas" class="nav-link">Idiomas</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+            <a class="download-btn" id="downloadCV" href="CV Lean.pdf" download>
+                <i class="fas fa-download"></i>
+                Download CV
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            
+            <!-- Sobre Mim Section -->
+            <section id="sobre" class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-user"></i>
+                    Sobre Mim
+                </h2>
+                <div class="about-content">
+                    <p class="about-text">
+                        Jovem argentino motivado, com grande vontade de crescer profissionalmente no Brasil. 
+                        Busco oportunidades que me permitam aprender, contribuir e enfrentar novos desafios 
+                        no setor tecnológico. Com formação técnica em informática e experiência diversificada 
+                        em vendas, manutenção técnica e construção civil.
+                    </p>
+                    <div class="qualities-grid">
+                        <div class="quality-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Proatividade</span>
+                        </div>
+                        <div class="quality-item">
+                            <i class="fas fa-users"></i>
+                            <span>Trabalho em Equipe</span>
+                        </div>
+                        <div class="quality-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Vontade de Aprender</span>
+                        </div>
+                        <div class="quality-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Boa Comunicação</span>
+                        </div>
+                        <div class="quality-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>Organização</span>
+                        </div>
+                        <div class="quality-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Pontualidade</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experiência Section -->
+            <section id="experiencia" class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    Experiência Profissional
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Vendas</h3>
+                            <h4>Instituto Vida e Hospital do Puiggari</h4>
+                            <p>Comercialização de materiais de saúde, informação e prevenção de doenças crônicas.</p>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Atendimento ao Cliente</span>
+                                <span class="skill-tag">Vendas</span>
+                                <span class="skill-tag">Saúde</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Manutenção Técnica</h3>
+                            <h4>Farmácia Farmaser</h4>
+                            <p>Manutenção de equipamentos e sistemas farmacêuticos, garantindo funcionamento adequado.</p>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Manutenção</span>
+                                <span class="skill-tag">Sistemas</span>
+                                <span class="skill-tag">Equipamentos</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Repositor de Mercadorias</h3>
+                            <h4>Supermercado El Punto</h4>
+                            <p>Reposição de mercadorias e atendimento ao público, mantendo organização e qualidade.</p>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Organização</span>
+                                <span class="skill-tag">Atendimento</span>
+                                <span class="skill-tag">Logística</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Construção Civil</h3>
+                            <h4>Residenciais e Comerciais</h4>
+                            <p>Eletricidade, construção e manutenção de obras em geral para projetos residenciais e comerciais.</p>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Eletricidade</span>
+                                <span class="skill-tag">Construção</span>
+                                <span class="skill-tag">Manutenção</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Educação Section -->
+            <section id="educacao" class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Educação
+                </h2>
+                <div class="education-grid">
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3>Técnico em Informática</h3>
+                            <h4>EPET N°46</h4>
+                            <p>Formação técnica completa em informática com foco em sistemas, hardware e software.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3>Eletricidade e Eletrônica</h3>
+                            <h4>Curso Técnico</h4>
+                            <p>Conhecimentos em sistemas elétricos e eletrônicos aplicados a diversos setores.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3>Carpintaria e Serralheria</h3>
+                            <h4>Curso Técnico</h4>
+                            <p>Habilidades práticas em trabalhos com madeira e metal para diversos projetos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Habilidades Section -->
+            <section id="habilidades" class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs"></i>
+                    Habilidades Técnicas
+                </h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Informática</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">Hardware e Sistemas</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Manutenção de Equipamentos</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Suporte Técnico</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Eletricidade</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">Instalações Elétricas</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Eletrônica Básica</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="65"></div>
+                            </div>
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Habilidades Interpessoais</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">Atendimento ao Cliente</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Trabalho em Equipe</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Adaptabilidade</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Idiomas Section -->
+            <section id="idiomas" class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-globe"></i>
+                    Idiomas
+                </h2>
+                <div class="languages-grid">
+                    <div class="language-item">
+                        <div class="language-header">
+                            <i class="fas fa-flag"></i>
+                            <span>Espanhol</span>
+                        </div>
+                        <div class="language-level">Nativo</div>
+                        <div class="language-bar">
+                            <div class="language-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-header">
+                            <i class="fas fa-flag"></i>
+                            <span>Português</span>
+                        </div>
+                        <div class="language-level">Fluente</div>
+                        <div class="language-bar">
+                            <div class="language-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-header">
+                            <i class="fas fa-flag"></i>
+                            <span>Inglês</span>
+                        </div>
+                        <div class="language-level">Técnico</div>
+                        <div class="language-bar">
+                            <div class="language-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projetos Section -->
+            <section id="projetos" class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-project-diagram"></i>
+                    Projetos e Realizações
+                </h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Sistemas de Manutenção</h3>
+                        <p>Implementação de protocolos de manutenção preventiva e corretiva em sistemas farmacêuticos.</p>
+                        <div class="project-tags">
+                            <span class="tag">Sistemas</span>
+                            <span class="tag">Manutenção</span>
+                            <span class="tag">Farmácia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Instalações Elétricas</h3>
+                        <p>Desenvolvimento e implementação de sistemas elétricos eficientes para projetos residenciais e comerciais.</p>
+                        <div class="project-tags">
+                            <span class="tag">Eletricidade</span>
+                            <span class="tag">Automação</span>
+                            <span class="tag">Residencial</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Otimização de Vendas</h3>
+                        <p>Estratégias de vendas e atendimento na área da saúde, focando em educação preventiva.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vendas</span>
+                            <span class="tag">Saúde</span>
+                            <span class="tag">Atendimento</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contato Section -->
+            <section id="contato" class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-envelope"></i>
+                    Contato
+                </h2>
+                <div class="contact-container">
+                    <div class="contact-info-grid">
+                        <div class="contact-card">
+                            <i class="fas fa-phone"></i>
+                            <h3>Telefone</h3>
+                            <p>(54) 96227280</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p>westfaldleandro@gmail.com</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Localização</h3>
+                            <p>Vacaria, Rio Grande do Sul</p>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Leandro Westfald. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#sobre">Sobre mim</a>
+                <a href="https://wa.me/555496227280">Whatsapp</a>
+                <a href="https://github.com/Lean-wes" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
