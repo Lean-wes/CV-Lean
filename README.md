@@ -1,3 +1,4 @@
+https://lean-wes.github.io/CV-Lean/
 # CV Interativo - Leandro Westfald
 
 Um currículo profissional e interativo desenvolvido com HTML5, CSS3 e JavaScript puro, otimizado para impressionar empregadores do setor tecnológico.
